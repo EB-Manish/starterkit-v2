@@ -1,0 +1,18 @@
+.site-footer--two {
+  .site-footer__top {
+    margin-bottom: rem-calc(48);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem-calc(104);
+    }
+    .site-footer-widget {
+      .social-icons {
+        margin: rem-calc(40 0);
+        justify-content: center;
+        @include media-breakpoint-up(lg) {
+          justify-content: flex-start;
+          margin: rem-calc(83) 0 0;
+        }
+      }
+    }
+  }
+}

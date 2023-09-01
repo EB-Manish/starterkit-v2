@@ -1,0 +1,40 @@
+.section-content-twelven {
+  .section-heading {
+    h2 {
+      max-width: rem-calc(825);
+      color: $darkest;
+      padding-bottom: rem-calc(85);
+      margin-bottom: rem-calc(22);
+      @include media-breakpoint-down(md) {
+        font-size: rem-calc(40);
+        font-weight: 600;
+        padding-bottom: rem-calc(38);
+        line-height: rem-calc(56);
+        width: rem-calc(327);
+        margin-bottom: 0px;
+      }
+    }
+  }
+  h1 {
+    color: $primary;
+    @include media-breakpoint-down(md) {
+      font-size: rem-calc(40);
+    }
+    span {
+      color: $overlay;
+    }
+  }
+  .item {
+    word-break: break-all;
+    p {
+      @include media-breakpoint-down(md) {
+        word-break: break-word;
+        margin: auto;
+        padding-bottom: rem-calc(45);
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      width: 50%;
+    }
+  }
+}

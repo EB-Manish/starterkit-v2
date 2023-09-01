@@ -1,0 +1,11 @@
+.post-navigation-link-next {
+  text-align: end;
+}
+
+.wp-block-post-navigation-link {
+  a {
+    &:hover {
+      color: $slate;
+    }
+  }
+}

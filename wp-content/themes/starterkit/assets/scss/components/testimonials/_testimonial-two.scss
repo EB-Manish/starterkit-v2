@@ -1,0 +1,115 @@
+.section-testimonial-two {
+  @include media-breakpoint-down(md) {
+    .section-title {
+      text-align: center;
+    }
+  }
+  max-width: rem-calc(920);
+  margin: auto;
+
+  .testimonial-single-two {
+    margin: 0 auto;
+    position: relative;
+    margin-top: rem-calc(72);
+
+    @include media-breakpoint-down(md) {
+      &__item {
+        padding: rem-calc(56 40);
+        border: rem-calc(1) solid #eaecf4;
+      }
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .desc {
+      font-weight: 600;
+      line-height: rem-calc(56);
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: left;
+      font-size: rem-calc(32);
+
+      @include media-breakpoint-down(md) {
+        font-weight: 400;
+        font-size: rem-calc(16);
+        line-height: rem-calc(24);
+      }
+
+    }
+
+    .author {
+      margin-top: rem-calc(40);
+      margin-bottom: rem-calc(40);
+
+      @include media-breakpoint-down(md) {
+        justify-content: center;
+        margin-top: rem-calc(56);
+        margin-bottom: 0;
+      }
+
+      &-info {
+        padding-left: rem-calc(20);
+        max-width: calc-rem(684);
+
+        p {
+          margin-bottom: rem-calc(5);
+          font-weight: 400;
+        }
+      }
+
+      img {
+        width: rem-calc(80);
+        height: rem-calc(80);
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+// swiper
+
+.testimonial-single-two {
+    .pagination-arrow-wrap{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      @include media-breakpoint-up(md){
+        justify-content:flex-start;
+      }
+      .swiper-pagination{
+        position: relative;
+        top:unset;
+        margin: unset !important;
+        bottom:unset;
+        width: auto;
+        .swiper-pagination-bullet{
+          position: relative;
+          top:unset;
+        }
+      }
+      .swiper-button-next, .swiper-button-prev{
+        position: relative;
+        top:unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        margin: unset !important;
+      }
+      .swiper-button-next:after, .swiper-button-prev:after{
+          font-size: $swiper-navigation-size;
+          color: $swiper-navigation-color;
+         
+      }
+  }
+  @include media-breakpoint-down(md) {
+    &__item {
+      &.swiper-slide {
+        height: auto;
+      }
+    }
+  }
+}

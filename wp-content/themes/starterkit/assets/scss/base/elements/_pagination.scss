@@ -1,0 +1,117 @@
+.pagination , .page-links {
+  padding: 0;
+  margin: rem-calc(24 0);
+  @include flex-center;
+  .page-link,
+  .page-numbers {
+    display: inline-block;
+    border: none;
+    color: $black;
+    width: rem-calc(24);
+    height: rem-calc(24);
+    font-size: rem-calc(14);
+    line-height: 1.6;
+    text-align: center;
+    padding: 0;
+    margin: rem-calc(0 4);
+    &.current {
+      background: none;
+      color: $black;
+      border: 1px solid $primary;
+    }
+    &.prev-link {
+      color: $gray-500;
+    }
+    &:hover{
+      background: $gray-200;
+    }
+    &.next, &.prev{
+      &:hover{
+        background:none;
+      }
+    }
+    .next-icon{
+        background-image: url("data:image/svg+xml,%3Csvg width=' 20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5892 3.57739C10.2637 3.25195 9.7361 3.25195 9.41066 3.57739C9.08523 3.90283 9.08523 4.43047 9.41066 4.7559L13.8214 9.16665H4.16659C3.70635 9.16665 3.33325 9.53974 3.33325 9.99998C3.33325 10.4602 3.70635 10.8333 4.16659 10.8333H13.8214L9.41066 15.2441C9.08523 15.5695 9.08523 16.0971 9.41066 16.4226C9.7361 16.748 10.2637 16.748 10.5892 16.4226L16.4225 10.5892C16.7479 10.2638 16.7479 9.73616 16.4225 9.41072L10.5892 3.57739Z' fill='%23E0E0E0' /%3E%3C/svg%3E");
+        width: 24px;
+      height: 24px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      &:hover{
+        background-color:transparent;
+        background-image: url("data:image/svg+xml,%3Csvg width=' 20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5892 3.57739C10.2637 3.25195 9.7361 3.25195 9.41066 3.57739C9.08523 3.90283 9.08523 4.43047 9.41066 4.7559L13.8214 9.16665H4.16659C3.70635 9.16665 3.33325 9.53974 3.33325 9.99998C3.33325 10.4602 3.70635 10.8333 4.16659 10.8333H13.8214L9.41066 15.2441C9.08523 15.5695 9.08523 16.0971 9.41066 16.4226C9.7361 16.748 10.2637 16.748 10.5892 16.4226L16.4225 10.5892C16.7479 10.2638 16.7479 9.73616 16.4225 9.41072L10.5892 3.57739Z' fill='%232196F3' /%3E%3C/svg%3E");
+      }
+    }
+    .prev-icon{
+        background-image: url("data:image/svg+xml,%3Csvg width=' 20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5892 4.7559C10.9146 4.43047 10.9146 3.90283 10.5892 3.57739C10.2637 3.25195 9.7361 3.25195 9.41066 3.57739L3.57733 9.41072C3.25189 9.73616 3.25189 10.2638 3.57733 10.5892L9.41066 16.4226C9.7361 16.748 10.2637 16.748 10.5892 16.4226C10.9146 16.0971 10.9146 15.5695 10.5892 15.2441L6.17843 10.8333H15.8333C16.2935 10.8333 16.6666 10.4602 16.6666 9.99998C16.6666 9.53974 16.2935 9.16665 15.8333 9.16665H6.17843L10.5892 4.7559Z' fill='%23E0E0E0' /%3E%3C/svg%3E");
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        &:hover{
+          background-color:transparent;
+          background-image: url("data:image/svg+xml,%3Csvg width=' 20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5892 4.7559C10.9146 4.43047 10.9146 3.90283 10.5892 3.57739C10.2637 3.25195 9.7361 3.25195 9.41066 3.57739L3.57733 9.41072C3.25189 9.73616 3.25189 10.2638 3.57733 10.5892L9.41066 16.4226C9.7361 16.748 10.2637 16.748 10.5892 16.4226C10.9146 16.0971 10.9146 15.5695 10.5892 15.2441L6.17843 10.8333H15.8333C16.2935 10.8333 16.6666 10.4602 16.6666 9.99998C16.6666 9.53974 16.2935 9.16665 15.8333 9.16665H6.17843L10.5892 4.7559Z' fill='%232196F3' /%3E%3C/svg%3E");
+        }
+      }
+  }
+  .page-item {
+    &.disabled {
+      color: $gray-500;
+    }
+
+    &.active {
+      .page-link {
+        background: none;
+        color: $black;
+        border: 1px solid $primary;
+      }
+    }
+  }
+}
+.pagination-two {
+  .page-numbers  {
+    border-radius: 50%;
+  }
+  .page-item {
+    .page-link  {
+      border-radius: 50%;
+    }
+  }
+}
+.pagination-three {
+  .page-numbers  {
+    &.current{
+      position: relative;
+      border: none;
+      &::after {
+        content: "";
+        position: absolute;
+        width: rem-calc(7);
+        height: rem-calc(7);
+        background: $primary;
+        border-radius: 50%;
+        top: 100%;
+        @include x_center;
+      }
+    }
+  }
+  .page-item {
+    &.active {
+      .page-link  {
+        position: relative;
+        border: none;
+        &::after {
+          content: "";
+          position: absolute;
+          width: rem-calc(7);
+          height: rem-calc(7);
+          background: $primary;
+          border-radius: 50%;
+          top: 100%;
+          @include x_center;
+        }
+      }
+    }
+  }
+}

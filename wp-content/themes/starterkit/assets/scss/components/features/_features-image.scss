@@ -1,0 +1,30 @@
+.section-features-image {
+  .features-lists {
+    margin-top: rem-calc(-72);
+    @include media-breakpoint-up(md) {
+      margin-top: rem-calc(-40);
+    }
+
+    .col-md-6 {
+      .features-lists__item {
+        .content__desc {
+          max-width: 100%;
+        }
+        .image-wrapper {
+          img,
+          svg {
+            @include media-breakpoint-up(md) {
+              height: rem-calc(290);
+            }
+          }
+        }
+      }
+    }
+    &__item {
+      margin-top: rem-calc(72);
+      @include media-breakpoint-up(md) {
+        margin-top: rem-calc(40);
+      }
+    }
+  }
+}

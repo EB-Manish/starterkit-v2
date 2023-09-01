@@ -1,0 +1,16 @@
+.wp-block-pullquote {
+    border: rem-calc(4) solid $black;
+    border-top: none;
+    border-left:none;
+    border-right:none;
+    padding:rem-calc(30 0);
+    blockquote {
+        border:none;
+        margin:0;
+        cite {
+            text-transform:uppercase;
+            font-size:rem-calc(16);
+            color:$primary;
+        }
+    }
+}

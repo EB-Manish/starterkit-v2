@@ -1,0 +1,28 @@
+.section-content-eight {
+  .content {
+    h5 {
+      font-weight: 500;
+      font-size: rem-calc(24);
+      line-height: rem-calc(32);
+    }
+    .content-box {
+      max-width: rem-calc(1012);
+      font-size: $font-size-lg;
+      line-height: rem-calc(40);
+      @include media-breakpoint-down(md) {
+        width: rem-calc(334);
+        font-weight: 400;
+        font-size: rem-calc(16);
+        line-height: rem-calc(24);
+      }
+      p {
+        color: $gray;
+      }
+    }
+    a {
+      font-weight: 500;
+      font-size: rem-calc(14);
+      line-height: rem-calc(20);
+    }
+  }
+}

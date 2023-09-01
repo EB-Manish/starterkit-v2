@@ -1,0 +1,22 @@
+.block-gallery {
+  .wp-block-gallery {
+    margin-left: rem-calc(-20);
+    @include media-breakpoint-up(md) {
+    }
+  }
+  .block-image {
+    margin-bottom: rem-calc(20);
+    width: calc(50% - 20px);
+    margin-left: rem-calc(20);
+    @include media-breakpoint-up(md) {
+      width: calc(33.3333% - 20px);
+    }
+    .container {
+      width: auto;
+      padding: 0;
+    }
+    .wp-block-image {
+      width: 100% !important;
+    }
+  }
+}

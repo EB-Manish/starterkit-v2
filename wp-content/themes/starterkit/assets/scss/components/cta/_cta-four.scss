@@ -1,0 +1,31 @@
+.section-two-col-cta{
+    .content{
+        padding: rem-calc(55 5);
+        @include media-breakpoint-up(xl){
+            width:rem-calc(325);
+            margin: 0 auto;
+            padding: rem-calc(102 0);
+        }
+        &__icon{
+            width:rem-calc(48);
+            margin-bottom: rem-calc(16);
+        }
+        &__title{
+            font-size:rem-calc(32);
+            line-height: rem-calc(40);
+        }
+        &__title, &__desc{
+            margin-bottom: rem-calc(16);
+        }
+        .btn-wrapper{
+            .btn{
+                font-size: rem-calc(16);
+                line-height: rem-calc(23);
+                font-weight: 500;
+            }
+        }
+    }
+    .gray{
+        background-color: $grayXL;
+    }
+}

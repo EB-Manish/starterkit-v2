@@ -1,0 +1,20 @@
+.woocommerce-Addresses {
+  .u-column1 {
+    @extend .col-sm-6;
+    &.col-1 {
+      width: 100%;
+    }
+  }
+  .u-column2 {
+    @extend .col-sm-6;
+    &.col-2 {
+      width: 100%;
+    }
+  }
+  address {
+    font-weight: 400;
+    font-size: rem-calc(16);
+    line-height: rem-calc(24);
+    color: $slate;
+  }
+}

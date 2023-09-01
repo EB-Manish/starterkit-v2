@@ -1,0 +1,218 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// ----
+// rem mixins
+// ----
+$rem-base: 16px !default;
+// list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)
+@function rem-separator($list) {
+    @if function-exists("list-separator")==true {
+        @return list-separator($list);
+    }
+    $test-list: ();
+    @each $item in $list {
+        $test-list: append($test-list, $item, space);
+    }
+    @return if($test-list==$list, space, comma);
+}
+@mixin rem-base($zoom: 100%) {
+    font-size: $zoom / 16px * $rem-base;
+}
+@function rem-convert($to, $values...) {
+    $result: ();
+    $separator: rem-separator($values);
+    @each $value in $values {
+        @if type-of($value)=="number" and unit($value)=="rem" and $to=="px" {
+            $result: append($result, $value / 1rem * $rem-base, $separator);
+        }
+        @else if type-of($value)=="number" and unit($value)=="px" and $to=="rem" {
+            $result: append($result, $value / ($rem-base / 1rem), $separator);
+        }
+        @else if type-of($value)=="list" {
+            $result: append($result, rem-convert($to, $value...), $separator);
+        }
+        @else {
+            $result: append($result, $value, $separator);
+        }
+    }
+    @return if(length($result)==1, nth($result, 1), $result);
+}
+@function rem($values...) {
+    @return rem-convert(rem, $values...);
+}
+@mixin rem($properties, $values...) {
+    @if type-of($properties)=="map" {
+        @each $property in map-keys($properties) {
+            @include rem($property, map-get($properties, $property));
+        }
+    }
+    @else {
+        @each $property in $properties {
+            #{$property}: rem-convert(rem, $values...);
+        }
+    }
+}
+// $base-font-size: 100% !default;
+// //$base-line-height is 24px while $base-font-size is 16px
+// $base-line-height: 150%;
+// It strips the unit of measure and returns it
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+@function convert-to-rem($value, $base-value: $rem-base) {
+    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    @if ($value==0rem) {
+        $value: 0;
+    } // Turn 0em into 0
+    @return $value;
+}
+@function rem-calc($values, $base-value: $rem-base) {
+    $max: length($values);
+    @if $max==1 {
+        @return convert-to-rem(nth($values, 1), $base-value);
+    }
+    $remValues: ();
+    @for $i from 1 through $max {
+        $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+    }
+    @return $remValues;
+}
+
+// -----------------------------
+// calc
+// -----------------------------
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+// -----------------------------
+// Placeholder
+// -----------------------------
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        opacity: 1;
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &.placeholder {
+        @content;
+    }
+}
+// -----------------------------
+// Transform
+// -----------------------------
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin x_center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+}
+@mixin y_center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+@mixin vertical_center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+@mixin xy_center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+}
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin custom-checkbox{
+    label{
+        position:relative;
+        cursor:pointer;
+        &:before {
+            content:'';
+            width: rem-calc(25);
+            height:rem-calc(25);
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 1px solid $input-border-color;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+            padding: rem-calc(10);
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right:  rem-calc(12) ;
+            border-radius: rem-calc(3);
+        }
+    }
+   
+    input{
+        width:rem-calc(25);
+        height:rem-calc(25);
+        padding: 0;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+        &:checked + label:before{
+            border-color: $primary;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgb(33 150 243 / 25%);
+        }
+        &:checked + label:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: rem-calc(4.5);
+            left: rem-calc(8.5);
+            width: rem-calc(8);
+            height:rem-calc(13);
+            border: 1px solid $primary;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            
+        }
+    }
+}

@@ -1,0 +1,104 @@
+/* footers
+--------------------------------------------- */
+@import "footer-one";
+@import "footer-two";
+@import "footer-three";
+@import "footer-four";
+@import "footer-five";
+
+/* footer   global css */
+
+.site-footer {
+  padding-top:rem-calc(50);
+  &-logo {
+    width: rem-calc(106);
+    margin: 0 auto;
+    @include media-breakpoint-up(lg) {
+      margin: unset;
+    }
+  }
+  .social-icons {
+    margin: 0;
+    margin-bottom: rem-calc(16);
+    display: flex;
+    @include media-breakpoint-up(lg) {
+      margin-bottom:0 ;
+    }
+    &__item {
+      margin: rem-calc(0 9.5);
+      @include media-breakpoint-up(lg) {
+        margin: 0 rem-calc(19) 0 0;
+      }
+      a {
+        display: inline-block;
+        width: rem-calc(24);
+        height: rem-calc(24);
+      }
+    }
+  }
+  .copyright {
+    color: $gray;
+    font-size: $font-size-xs;
+    line-height: $line-height-xlg;
+  }
+  .footer-widget {
+    .widget {
+      &-title {
+        margin-bottom: rem-calc(19);
+      }
+      .menu {
+        padding: unset;
+        margin: unset;
+        &-item {
+          list-style: none;
+          a {
+            color: $slate;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom-menu {
+    .menu {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      @include media-breakpoint-up(lg) {
+        justify-content: start;
+      }
+      &-item {
+        list-style: none;
+        a {
+          width: auto;
+          font-size: $font-size-xs;
+          line-height: $line-height-xlg;
+          color: $slate;
+          padding: rem-calc(8);
+          &:hover {
+            color: $primary;
+          }
+          @include media-breakpoint-up(lg) {
+            padding: 0 rem-calc(39) 0 0;
+          }
+        }
+      }
+    }
+  }
+  &__mid {
+    margin-bottom: rem-calc(112);
+    &__item {
+      display: flex;
+      @include media-breakpoint-down(md) {
+        width: 50%;
+        flex: 0 0 auto;
+      }
+    }
+  }
+  &__bottom{
+    padding-bottom: rem-calc(32);
+  }
+}

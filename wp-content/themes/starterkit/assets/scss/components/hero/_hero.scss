@@ -1,0 +1,115 @@
+.section-hero {
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: rem-calc(40);
+    }
+  }
+
+  .section-heading {
+    &__btn {
+      .btn-primary {
+        &:visited {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: rem-calc(32);
+
+    @include media-breakpoint-down(md) {
+      margin-top: rem-calc(24);
+    }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+
+  }
+
+  .form-wrapper {
+    background-color: #fff;
+    max-width: rem-calc(790);
+    margin: auto;
+
+    @include media-breakpoint-down(sm) {
+      background-color: transparent;
+    }
+
+    #field_submit {
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
+    .gform {
+      &_wrapper {
+        padding: rem-calc(10 15);
+        margin-top: rem-calc(40);
+
+        form {
+          display: flex;
+          align-items: center;
+          margin: 0;
+
+          @include media-breakpoint-down(sm) {
+            flex-direction: column;
+          }
+        }
+
+        .gform_validation_errors {
+          display: none;
+        }
+      }
+
+      &_body {
+        width: 100%;
+
+        .ginput_container {
+          input {
+            border: 0;
+            width: 100%;
+
+            @include media-breakpoint-down(sm) {
+              padding: rem-calc(10);
+              text-align: center;
+            }
+
+            &:focus {
+              outline: none;
+            }
+
+            &:focus-visible {
+              outline: 0;
+            }
+          }
+        }
+      }
+
+      &_footer {
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin-top: rem-calc(8);
+
+          .gform_button {
+            width: 100%;
+          }
+        }
+
+        .gform_button {
+          color: #fff;
+          background: #1a78c2;
+          border: transparent;
+          padding: 0.75rem 2.5rem;
+          font-size: rem-calc(14);
+          display: inline-block;
+
+          &:visited {
+            color: #1a78c2;
+          }
+        }
+      }
+    }
+  }
+}

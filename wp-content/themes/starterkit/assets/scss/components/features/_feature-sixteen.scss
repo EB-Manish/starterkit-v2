@@ -1,0 +1,20 @@
+.section-features-16-17 {
+  .section-heading {
+    max-width: rem-calc(485);
+    margin-bottom: rem-calc(42 - 24);
+  }
+  .accordion-item {
+    &.has-index {
+      .index {
+        @include media-breakpoint-up(lg) {
+          margin-right: rem-calc(87);
+        }
+      }
+      .accordion-body {
+        @include media-breakpoint-up(lg) {
+          padding-left: rem-calc(87 + 37);
+        }
+      }
+    }
+  }
+}

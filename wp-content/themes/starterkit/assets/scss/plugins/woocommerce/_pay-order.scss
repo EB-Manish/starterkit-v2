@@ -1,0 +1,31 @@
+.woocommerce {
+  #order_review {
+    .shop_table {
+      th {
+        padding: rem-calc(20 30 21);
+      }
+      tbody {
+        tr {
+          border: 1px solid #ebebeb;
+          td {
+            padding: rem-calc(15 30);
+          }
+        }
+      }
+      tfoot {
+        tr {
+          td {
+            padding: rem-calc(20 30 21);
+          }
+        }
+      }
+    }
+    #payment {
+      .form-row {
+        button {
+          @extend .btn, .btn-primary;
+        }
+      }
+    }
+  }
+}

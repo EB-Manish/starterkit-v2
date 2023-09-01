@@ -1,0 +1,24 @@
+.woocommerce-account {
+  .woocommerce {
+    @extend .row;
+
+    .woocommerce-MyAccount-navigation {
+      @extend .col-lg-4;
+    }
+
+    .woocommerce-MyAccount-content {
+      @extend .col-lg-8;
+    }
+    .u-columns {
+      @extend .row;
+
+      .u-column1 {
+        @extend .col-md-6;
+      }
+
+      .u-column2 {
+        @extend .col-md-6;
+      }
+    }
+  }
+}

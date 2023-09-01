@@ -1,0 +1,22 @@
+.wp-block-search {
+    label {
+        display: none;
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+
+    &__input {
+        width: rem-calc(600);
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        margin: 0;
+    }
+
+}

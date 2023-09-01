@@ -1,0 +1,38 @@
+.section-content-eleven {
+  h4 {
+    padding-top: rem-calc(32);
+    padding-bottom: rem-calc(8);
+  }
+  .item {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    .img-wrap {
+      img {
+        height: rem-calc(733);
+        @include media-breakpoint-down(md) {
+          height: rem-calc(404);
+        }
+      }
+    }
+    .location {
+      color: $gray;
+    }
+    .content-wrap {
+      h4 {
+        font-weight: 500;
+        font-size: rem-calc(32);
+        line-height: rem-calc(40);
+      }
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
+      .location {
+        padding-bottom: rem-calc(75);
+        font-weight: 400;
+        font-size: rem-calc(16);
+        line-height: rem-calc(24);
+      }
+    }
+  }
+}

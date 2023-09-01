@@ -1,0 +1,83 @@
+.section-cta-three {
+    background-color: $grayL;
+    
+    .section-heading {
+        padding: rem-calc(43 24 75 24);
+        @include media-breakpoint-up(lg){
+            padding: rem-calc(43  48 75 48);
+        }
+        &__icon {
+            margin-bottom: rem-calc(16);
+            img, svg {
+                max-width: rem-calc(48);
+                max-height: rem-calc(48);
+                object-fit: cover;
+            }
+        }
+        &__title {
+            font-size:rem-calc(32);
+            line-height: rem-calc(40);
+        }
+        &__desc {
+            max-width: rem-calc(325);
+            p {
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__btn {
+            margin-top: rem-calc(40);
+            a{
+                font-weight: 500;
+                font-size: rem-calc(16);
+                line-height: rem-calc(23);
+            }
+        }
+    }
+    &.background-1 {
+        @include media-breakpoint-down(md) {
+            padding-top: rem-calc(315);
+        }
+    }
+    &.background-2 {
+        position: relative;
+        $negative-margin: 115;
+        @include media-breakpoint-down(md) {
+            padding-top: 0;
+        }
+        .bg-image {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 108%;
+            z-index: 1;
+            @include media-breakpoint-up(md) {
+                position: absolute;
+                padding-bottom: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        .section-heading {
+            @include media-breakpoint-down(md) {
+                margin-top: rem-calc(-$negative-margin);
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+pipelines:
+  branches:
+    main:
+      - step:
+          name: 'Deploy Starterkit v1'
+          runs-on:
+            - 'self.hosted'
+            - 'linux'
+            - 'ebpearls'
+          script:
+            - pipe: atlassian/ssh-run:0.4.0
+              variables:
+                SSH_USER: $DEV_USER
+                SERVER: $DEV_HOST
+                SSH_KEY: $DEV_SSH_KEY
+                PORT: $DEV_PORT
+                MODE: 'script'
+                COMMAND: 'cicd/dev'
+    starterkit-v2:
+      - step:
+          name: 'Deploy Starterkit v2'
+          runs-on:
+            - 'self.hosted'
+            - 'linux'
+            - 'ebpearls'
+          script:
+            - pipe: atlassian/ssh-run:0.4.0
+              variables:
+                SSH_USER: $DEV_NEW_USER
+                SERVER: $DEV_NEW_HOST
+                SSH_KEY: $DEV_NEW_SSH_KEY
+                PORT: $DEV_PORT
+                MODE: 'script'
+                COMMAND: 'cicd/dev_new'

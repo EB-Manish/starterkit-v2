@@ -1,0 +1,127 @@
+.section-cta--two{
+    .section-heading{
+        
+        @include media-breakpoint-up(md){
+            width:rem-calc(600);
+            margin:0 auto;
+            padding:0;
+        }
+        &__desc{
+            margin-bottom:rem-calc(48);
+            @include media-breakpoint-up(md){
+                width:rem-calc(485);
+                margin:0 auto rem-calc(29);
+            }
+        }
+        .form-wrapper {
+            background-color: $grayL;
+            margin: auto;
+            padding: rem-calc(6 14);
+            position: relative;
+            height:rem-calc(72);
+            @include media-breakpoint-down(sm) {
+                background-color: transparent;
+            }
+            .gform {
+                &_heading{
+                    display: none;
+                }
+                &_wrapper {
+                    form {
+                        display: flex;
+                        align-items: center;
+                        @include media-breakpoint-down(sm) {
+                            flex-direction: column;
+                        }
+                    }
+                    .gform_validation_errors {
+                        display: none;
+                    }
+                }
+    
+                &_body {
+                    width: 100%;
+                    .gfield{
+                        position: relative;
+                        .validation_message{
+                            background: none; 
+                             border: none; 
+                            margin-top: 0; 
+                            padding: 0;
+                            font-size:rem-calc(12);
+                            text-align: left;
+                            @include media-breakpoint-up(md) {
+                                position: absolute;
+                                left: rem-calc(-14);
+                                top:rem-calc(72);
+                            }
+                            &.gfield_validation_message{
+                                color:$red;
+                            }
+                        }
+                        &.hidden_label{
+                            label{
+                                display: none;
+                            }
+                        }
+                    }
+                    .ginput_container {
+                        input {
+                            background:none;
+                            border: 0;
+                            width: 100%;
+    
+                            @include media-breakpoint-down(sm) {
+                                padding: rem-calc(10);
+                                background:$grayL;
+                            }
+                            &:focus {
+                                outline: none;
+                            }
+                            &:focus-visible {
+                                outline: 0;
+                            }
+                        }
+                    }
+                }
+    
+                &_footer {
+                    padding:0;
+                    margin: 0;
+                    position: relative;
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        margin-top: rem-calc(8);
+                        .gform_button {
+                            width: 100%;
+                        }
+                    }
+                    .gform_button {
+                        @include flex-center;
+                        color: $white;
+                        background: $primary;
+                        border: transparent;
+                        height: rem-calc(44);
+                        font-size: rem-calc(16);
+                        margin-bottom: 0;
+                        @include media-breakpoint-up(md) {
+                            width:rem-calc(165);
+                        }
+                    }
+                    .gform_ajax_spinner{
+                        @include y_center;
+                        right:10px;
+                        z-index: 9;
+                        background-color: #000;
+                        border-color:#000;
+                    }
+                }
+            }
+            .gform_confirmation_wrapper {
+                .gform_confirmation_message{
+                    color:$success;
+                }
+            }
+        }
+    }
+}

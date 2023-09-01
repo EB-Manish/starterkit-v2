@@ -1,0 +1,10 @@
+.woocommerce-MyAccount-content {
+    @include media-breakpoint-down(lg) {
+        margin-top: rem-calc(25);
+    }
+
+    .woocommerce-Message {
+        @extend .alert, .alert-primary;
+    }
+
+}

@@ -1,0 +1,75 @@
+.section-testimonial-six {
+  .section-heading {
+    width: rem-calc(295);
+    @include media-breakpoint-up(lg) {
+      width: rem-calc(350);
+    }
+    &__title {
+      font-weight: 600;
+      font-size: rem-calc(40);
+      line-height: rem-calc(56);
+      margin-bottom: rem-calc(64);
+      @include media-breakpoint-up(md) {
+        font-size: rem-calc(56);
+        line-height: rem-calc(64);
+        margin-bottom: 0;
+      }
+    }
+  }
+  .testimonial {
+    &:not(:last-child) {
+      margin-bottom: rem-calc(32);
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem-calc(45);
+      }
+    }
+    &__heading {
+      margin-bottom: rem-calc(24);
+      font-size: rem-calc(24);
+      line-height: rem-calc(32);
+      font-weight: 500;
+      @include media-breakpoint-down(lg) {
+        font-size: rem-calc(16);
+        line-height: rem-calc(24);
+        font-weight: 400;
+      }
+    }
+    &-content {
+      &__image {
+        width: rem-calc(56);
+        height: rem-calc(56);
+        margin-right: rem-calc(16);
+        @include media-breakpoint-up(lg) {
+          width: rem-calc(48);
+          height: rem-calc(48);
+          margin-right: rem-calc(8);
+        }
+        img {
+          width: rem-calc(56);
+          height: rem-calc(56);
+          @include media-breakpoint-up(lg) {
+            width: rem-calc(48);
+            height: rem-calc(48);
+          }
+        }
+      }
+      &__info {
+        &__name {
+          color: $slate;
+          font-weight: 400;
+          @include media-breakpoint-up(lg) {
+            font-size: rem-calc(12);
+            line-height: rem-calc(24);
+          }
+        }
+        &__position {
+          color: $gray;
+          @include media-breakpoint-up(lg) {
+            font-size: rem-calc(12);
+            line-height: rem-calc(24);
+          }
+        }
+      }
+    }
+  }
+}

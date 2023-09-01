@@ -1,0 +1,14 @@
+blockquote, .wp-block-quote{
+    border-left: rem-calc(5) solid $slate;
+    padding: rem-calc(30 20);
+    background: $grayL;
+    border-radius: rem-calc(5);
+    .container {
+        padding: 0;
+        max-width: auto;
+    }
+    cite {
+        font-size: rem-calc(14);
+        font-weight: 700;
+    }
+}

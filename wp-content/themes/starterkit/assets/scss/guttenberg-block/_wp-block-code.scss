@@ -1,0 +1,9 @@
+.block-code,
+.block-preformatted {
+    .wp-block-code,
+    .wp-block-preformatted {
+        background: $grayL;
+        padding: rem-calc(10);
+        border-radius: rem-calc(5);
+    }
+}

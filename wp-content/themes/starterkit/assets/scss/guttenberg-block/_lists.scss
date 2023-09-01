@@ -1,0 +1,24 @@
+.block-list {
+  ul,
+  ol {
+    padding-left: rem-calc(19);
+    margin: 0;
+    line-height: rem-calc(32);
+    li {
+      color: $grayXd;
+      margin-bottom: rem-calc(4);
+      &::marker {
+        margin-right: rem-calc(16);
+      }
+    }
+  }
+  ul {
+    list-style: disc;
+    ul {
+      list-style: circle;
+      ul {
+        list-style: square;
+      }
+    }
+  }
+}

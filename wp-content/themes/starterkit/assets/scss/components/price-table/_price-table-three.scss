@@ -1,0 +1,68 @@
+.section-price-table-three {
+  .section-heading {
+    margin: auto;
+
+    @include media-breakpoint-down(md) {
+      padding: rem-calc(60 20);
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-right: 0;
+    }
+  }
+
+  .section-content {
+    .plan-card {
+      max-width: rem-calc(277);
+      padding: rem-calc(48 26);
+      margin: rem-calc(1);
+      position: relative;
+
+      @include media-breakpoint-down(md) {
+        max-width: rem-calc(335);
+        padding: rem-calc(32 26);
+        margin: 0;
+      }
+
+      &.feature-section {
+        z-index: 4;
+
+        &::before {
+          @include media-breakpoint-down(xl) {
+            transform: none;
+          }
+
+          content: "";
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transform: scale(1.1);
+          background: $grayL;
+        }
+      }
+
+      &__list {
+        padding-left: 0;
+      }
+
+      &__btn {
+        position: absolute;
+        bottom: rem-calc(30);
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-down(md) {
+          bottom: rem-calc(20);
+        }
+
+        a {
+          padding: rem-calc(10.5);
+          width: rem-calc(224);
+        }
+      }
+    }
+  }
+}

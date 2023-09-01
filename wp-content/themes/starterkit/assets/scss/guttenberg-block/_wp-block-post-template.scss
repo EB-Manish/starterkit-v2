@@ -1,0 +1,23 @@
+.wp-block-post-template {
+    @extend .row;
+
+    margin-left: 0 !important;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        @extend .col-12, .col-md-4;
+        width: 30%;
+        margin: 0;
+        padding: 0;
+
+        @include media-breakpoint-down(md) {
+            margin: rem-calc(20 0);
+            width: 100%;
+        }
+    }
+}

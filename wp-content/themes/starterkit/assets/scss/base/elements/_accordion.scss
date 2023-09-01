@@ -1,0 +1,36 @@
+.accordion {
+  &-header {
+    font-size: rem-calc(24);
+    line-height: 1.33;
+    cursor: pointer;
+    @include media-breakpoint-down(lg) {
+      padding-top: rem-calc(24);
+      padding-bottom: rem-calc(24);
+    }
+    &.collapsed {
+    }
+  }
+  &-body {
+    max-width: rem-calc(795);
+  }
+  &-item {
+    &:not(:first-child) {
+      border-top: rem-calc(1) solid $accordion-border-color;
+    }
+    &.has-index {
+      .index {
+        width: rem-calc(30);
+        margin-right: rem-calc(16);
+        @include media-breakpoint-up(lg) {
+          width: rem-calc(37);
+        }
+      }
+      .accordion-body {
+        padding-left: rem-calc(30+16);
+        @include media-breakpoint-up(lg) {
+          padding-left: rem-calc(37+16);
+        }
+      }
+    }
+  }
+}

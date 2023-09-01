@@ -1,0 +1,27 @@
+.wp-block-calendar {
+
+    .wp-calendar-table {
+        max-width: rem-calc(400);
+
+        th {
+            background-color: $primary;
+            border: 1px solid $gray;
+            color: $black;
+        }
+
+        tbody {
+            td {
+                border: 1px solid $gray;
+
+            }
+        }
+    }
+
+    .wp-calendar-nav {
+        text-align: left;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

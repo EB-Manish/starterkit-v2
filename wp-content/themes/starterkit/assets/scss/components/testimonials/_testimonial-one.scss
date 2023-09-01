@@ -1,0 +1,117 @@
+.section-testimonial-one {
+  .testimonial-single-one {
+    max-width: rem-calc(730);
+    margin: 0 auto;
+    position: relative;
+    margin-top: rem-calc(72);
+    padding: rem-calc(0 25);
+    figure {
+      margin: 0;
+    }
+
+    .desc {
+      font-weight: 400;
+      line-height: rem-calc(48);
+      max-width: rem-calc(648);
+      margin: 0 auto;
+      text-align: center;
+      font-size: rem-calc(32);
+
+      @include media-breakpoint-down(md) {
+        font-size: rem-calc(24);
+        line-height: rem-calc(40);
+      }
+    }
+
+    .author {
+      margin-top: rem-calc(40);
+
+      &-info {
+        padding-left: rem-calc(20);
+        max-width: calc-rem(684);
+
+        p {
+          margin-bottom: rem-calc(5);
+          font-weight: 400;
+        }
+      }
+
+      img {
+        width: rem-calc(80);
+        height: rem-calc(80);
+        object-fit: cover;
+      }
+    }
+
+    button:focus,
+    button:active {
+      box-shadow: none;
+      outline: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+
+      .slick-prev,
+      .slick-next {
+        position: relative;
+        z-index: 99;
+        width: 20px;
+        height: 20px;
+        @include y_center;
+
+        &:before {
+          content: "" !important;
+          position: absolute;
+          width: rem-calc(10);
+          height: rem-calc(20);
+        }
+      }
+
+      .slick-prev {
+        left: 0 !important;
+
+        &:before {
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='22' viewBox='0 0 12 22' fill='none'%3E%3Cpath d='M11 0.999996L1 11L11 21' stroke='%233C434A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-size: rem-calc(10 20) !important;
+          background-repeat: no-repeat !important;
+        }
+      }
+
+      .slick-next {
+        right: 0 !important;
+
+        &:before {
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='22' viewBox='0 0 12 22' fill='none'%3E%3Cpath d='M0.999997 21L11 11L1 1' stroke='%233C434A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-size: rem-calc(10 20) !important;
+          background-repeat: no-repeat !important;
+        }
+      }
+
+      .slick-dots {
+        left: 0;
+        bottom: rem-calc(-60);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+          justify-content: flex-start;
+          bottom: rem-calc(-35);
+        }
+      }
+    }
+   
+  }
+}
+
+// swiper 
+
+.testimonial-single-one {
+  &.swiper{
+    min-height:rem-calc(420);
+    max-width:rem-calc(1110);
+    @include media-breakpoint-up(md){
+      min-height:rem-calc(330);
+    }
+  }
+}

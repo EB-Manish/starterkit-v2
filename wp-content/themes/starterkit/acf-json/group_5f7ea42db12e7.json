@@ -1,0 +1,79 @@
+{
+    "key": "group_5f7ea42db12e7",
+    "title": "Mega Menu Column",
+    "fields": [
+        {
+            "key": "field_5f80247330782",
+            "label": "Enable Mega Memu",
+            "name": "enable_mega_memu",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable",
+            "ui": 1
+        },
+        {
+            "key": "field_5f7ea440820d7",
+            "label": "Sub Menu Column",
+            "name": "sub_menu_column",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Only for the parent menu items",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f80247330782",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "two": "Two",
+                "three": "Three",
+                "four": "Four"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680164914
+}

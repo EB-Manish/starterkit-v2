@@ -1,0 +1,29 @@
+.section-content-thirteen {
+  .content-background {
+    background-color: $overlay;
+    padding-top: rem-calc(88);
+    padding-bottom: rem-calc(88);
+    @include media-breakpoint-down(lg) {
+      padding-top: rem-calc(29);
+      padding-bottom: rem-calc(39);
+      width: 95%;
+    }
+    .item {
+      word-break: break-all;
+      @include media-breakpoint-down(lg) {
+        width: 50%;
+        padding-bottom: rem-calc(32);
+      }
+    }
+    h2 {
+      max-width: rem-calc(825);
+      color: $darkest;
+      padding-bottom: rem-calc(85);
+    }
+  }
+  h1 {
+    span {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.wp-block-post {
+    &-title {
+        font-size: rem-calc(24);
+
+        a {
+            text-decoration: none;
+
+            color: $slate;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &-featured-image {
+        img {
+            width: auto;
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 290/189;
+        }
+    }
+
+    &-excerpt {
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+
+    &-date {
+        color: $black;
+    }
+}

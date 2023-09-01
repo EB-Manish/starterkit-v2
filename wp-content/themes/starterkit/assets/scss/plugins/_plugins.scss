@@ -1,0 +1,9 @@
+@import "./jetpack/infinite-scroll";
+@import "~select2/src/scss/core";
+@import "./woocommerce/woocommerce"; //uncoomment if woocommerce is enabled
+@import "~placeholder-loading/src/scss/placeholder-loading"; //src:https: //www.npmjs.com/package/placeholder-loading
+
+// import swiper styles bundle
+@import '~swiper/css/bundle';
+// import custom swiper styles 
+@import 'swiper/swiper';

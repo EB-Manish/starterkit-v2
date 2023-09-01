@@ -1,0 +1,68 @@
+.container {
+  @include media-breakpoint-up(lg) {
+    padding-left: calc(0.5 * $spacer * 1.875);
+    padding-right: calc(0.5 * $spacer * 1.875);
+  }
+}
+
+.row {
+  @include media-breakpoint-up(lg) {
+    margin-left: calc(-0.5 * $spacer * 1.875);
+    margin-right: calc(-0.5 * $spacer * 1.875);
+  }
+
+  &>* {
+    @include media-breakpoint-up(lg) {
+      padding-left: calc(0.5 * $spacer * 1.875);
+      padding-right: calc(0.5 * $spacer * 1.875);
+    }
+  }
+}
+
+.main {
+  overflow: hidden;
+}
+
+// sections
+.section {
+  padding: rem-calc($section-padding-sm 0);
+
+  @include media-breakpoint-up(md) {
+    padding: rem-calc(($section-padding - 20) 0);
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: rem-calc($section-padding 0);
+  }
+
+  &.p-small {
+    padding: rem-calc($section-padding-sm 0);
+  }
+
+  &.p-large {
+    padding: rem-calc($section-padding-sm 0);
+
+    @include media-breakpoint-up(md) {
+      padding: rem-calc($section-padding 0);
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: rem-calc($section-padding-lg 0);
+    }
+  }
+}
+
+.section-heading {
+  &__title {}
+
+  &__desc {
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    ul{
+      margin-top: rem-calc(24) !important;
+    }
+  }
+}

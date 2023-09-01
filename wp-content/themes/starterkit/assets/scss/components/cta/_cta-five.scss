@@ -1,0 +1,22 @@
+.section-cta--five{
+    .section-heading{
+        max-width:rem-calc(950);
+        &__btn-wrap{
+            @include media-breakpoint-down(md){
+                margin-top:rem-calc(56);
+            }
+            .btn{
+                width:100%;
+                padding:rem-calc(9.5 22);
+                height: rem-calc(42);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include media-breakpoint-up(md){
+                    width:rem-calc(165);
+                }
+            }
+        }
+       
+    }
+}

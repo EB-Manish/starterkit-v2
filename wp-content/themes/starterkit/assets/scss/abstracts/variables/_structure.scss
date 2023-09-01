@@ -1,0 +1,25 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1248px
+);
+$spacer: 1rem;
+$gutters: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 1.875,
+);
+
+
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+$section-padding-sm: 80;
+$section-padding: 110;
+$section-padding-lg: 170;
+

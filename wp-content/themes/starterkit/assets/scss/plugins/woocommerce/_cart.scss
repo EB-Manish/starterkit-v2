@@ -1,0 +1,374 @@
+.woocommerce {
+  .cart-page {
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      margin: rem-calc(0 -15);
+    }
+
+    .woocommerce-cart-form {
+      @include media-breakpoint-up(xl) {
+        flex: 0 0 auto;
+        width: 74%;
+        padding: rem-calc(0 65 0 15);
+        border-right: 1px solid $light;
+        margin-right: 1%;
+      }
+      .cart {
+        tr {
+          th {
+            background: none;
+            padding: rem-calc(16);
+            text-align: left;
+          }
+        }
+        &_item {
+          border-bottom: 1px solid $light;
+
+          @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+            background-color: $grayXL;
+            border: none;
+            margin-bottom: rem-calc(16);
+          }
+          @include media-breakpoint-up(md) {
+            &:first-child td {
+              padding-top: 0;
+            }
+          }
+          td {
+            padding: rem-calc(16);
+          }
+          .product-thumbnail {
+            width:rem-calc(95);
+            margin: 0 auto;
+            img {
+              width: rem-calc(62);
+              height: rem-calc(93);
+              object-fit: cover;
+              object-position: center;
+            }
+            @include media-breakpoint-down(md) {
+              text-align: center;
+
+              &::before {
+                display: none;
+              }
+            }
+          }
+          .product-name {
+            a {
+              font-weight: 500;
+              font-size: rem-calc(16);
+              line-height: rem-calc(24);
+              color: $black1;
+            }
+            .variation{
+              display: flex;
+              .variation-Size{
+                margin-right:rem-calc( 15);
+              }
+            }
+          }
+
+          .product-quantity {
+            .quantity {
+              input {
+                width: rem-calc(113);
+                color: $gray-500;
+                font-weight: 400;
+                font-size: rem-calc(16);
+                line-height: rem-calc(28);
+              }
+            }
+          }
+
+          .product-subtotal {
+            .amount {
+              font-weight: 500;
+              font-size: rem-calc(24);
+              line-height: rem-calc(32);
+              color: $gray-800;
+            }
+          }
+
+          .product-remove {
+            a {
+              text-align: left;
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              font-size: 34px;
+              line-height: 0.5;
+              font-weight: 200;
+              color: $label;
+
+              &:hover {
+                color: $primary;
+              }
+            }
+
+            @include media-breakpoint-down(md) {
+              order: 8;
+              padding-bottom: rem-calc(16);
+              border-top: 1px solid $gray;
+              text-align: center;
+            }
+          }
+        }
+
+        .actions {
+          @include media-breakpoint-up(md) {
+            text-align: right;
+            padding: rem-calc(20 0 0);
+          }
+
+          .button {
+            background: $primary;
+            color: $white;
+            height: rem-calc(44);
+            border: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 0;
+
+            @include media-breakpoint-up(md) {
+              width: rem-calc(255);
+              margin-left: rem-calc(8);
+            }
+
+            &:hover {
+              background: $secondary;
+            }
+          }
+
+          .coupon {
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+
+            @include media-breakpoint-up(md) {
+              display: inline-flex;
+              align-items: center;
+              flex-direction: row;
+            }
+
+            label {
+              font-weight: 500;
+              font-size: rem-calc(16);
+              line-height: rem-calc(23);
+              margin-bottom: rem-calc(16);
+
+              @include media-breakpoint-up(md) {
+                margin-right: rem-calc(8);
+                margin-bottom: 0;
+              }
+            }
+
+            input {
+              color: $gray-500;
+              border-color: $gray-500;
+              font-weight: 400;
+              font-size: rem-calc(16);
+              height: rem-calc(44);
+              line-height: rem-calc(24);
+              margin-bottom: rem-calc(16);
+              width: 100%;
+              @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+                max-width: rem-calc(150);
+              }
+            }
+
+            .button {
+              background: none;
+              color: $overlay;
+              border: 1px solid $primary;
+              height: rem-calc(44);
+              @include flex-center;
+              width: unset;
+              margin-bottom: rem-calc(16);
+
+              @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+                margin-left: rem-calc(8);
+              }
+
+              &:hover {
+                background: $primary;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .cart-collaterals {
+      @include media-breakpoint-up(xl) {
+        flex: 0 0 auto;
+        width: 25%;
+        padding: rem-calc(0 15);
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-top: rem-calc(32);
+      }
+
+      .cart_totals {
+        h2 {
+          color: $black1;
+          font-weight: 500;
+          font-size: rem-calc(24);
+          line-height: rem-calc(32);
+          padding-bottom: rem-calc(16);
+        }
+
+        th {
+          background: none;
+          font-weight: 500;
+          font-size: rem-calc(16);
+          line-height: rem-calc(23);
+          display: block;
+        }
+
+        .cart-subtotal,
+        .order-total {
+          strong {
+            font-weight: 400;
+            font-size: rem-calc(14);
+            line-height: 160%;
+          }
+
+          td {
+            text-align: right;
+
+            &:before {
+              display: none;
+            }
+          }
+        }
+
+        tr {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: rem-calc(24);
+
+          &:last-child {
+            padding-top: 10px;
+          }
+
+          td {
+            text-align: left !important;
+
+            &:before {
+              display: none;
+            }
+          }
+        }
+
+        .order-summary {
+          border-bottom: 1px solid $light;
+        }
+      }
+
+      .wc-proceed-to-checkout {
+        .checkout-button {
+          background: $primary;
+          color: $white;
+          width: 100%;
+          height: rem-calc(44);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include media-breakpoint-up(md) {
+            // width:rem-calc(255);
+            height: rem-calc(44);
+          }
+
+          &:hover {
+            background: $secondary;
+            color: $white;
+          }
+        }
+      }
+
+      .woocommerce-shipping-totals,
+      .shipping {
+        display: flex;
+        flex-direction: column;
+
+        th {
+          color: $black1;
+          font-weight: 500;
+          font-size: rem-calc(24);
+          line-height: rem-calc(32);
+          padding-bottom: rem-calc(16);
+        }
+
+        .woocommerce-shipping-methods {
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            margin-bottom: rem-calc(24);
+
+            @include custom-checkbox;
+            &:only-child{
+              label{
+                &:before{
+                  border-color: $primary;
+                  outline: 0;
+                  box-shadow: 0 0 0 0.25rem rgb(33 150 243 / 25%);
+                }
+                &:after {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  top: rem-calc(4.5);
+                  left: rem-calc(8.5);
+                  width: rem-calc(8);
+                  height:rem-calc(13);
+                  border: 1px solid $primary;
+                  border-width: 0 3px 3px 0;
+                  transform: rotate(45deg);
+                  
+                }
+              }
+            }
+          }
+        }
+
+        .woocommerce-shipping-calculator {
+          input {
+            width: 100%;
+          }
+
+          .shipping-calculator-button {
+            width: 100%;
+            @extend .btn, .btn-outline-primary;
+          }
+
+          .shipping-calculator-form {
+            margin-top: rem-calc(8);
+          }
+        }
+
+        .button {
+          @extend .btn, .btn-primary;
+          width: 100%;
+        }
+
+
+      }
+
+      .order-total {
+        border-top: 1px solid $light;
+      }
+    }
+  }
+}

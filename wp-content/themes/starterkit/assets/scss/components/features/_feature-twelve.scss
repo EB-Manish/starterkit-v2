@@ -1,0 +1,13 @@
+.section-features-12 {
+  .section-heading {
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem-calc(64 - 24);
+    }
+    &__title {
+      max-width: rem-calc(400);
+    }
+    &__desc {
+      max-width: rem-calc(485);
+    }
+  }
+}

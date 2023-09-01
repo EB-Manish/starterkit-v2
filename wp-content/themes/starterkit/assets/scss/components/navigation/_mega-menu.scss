@@ -1,0 +1,157 @@
+.site-header:not(.navigation-2) {
+    .primary-menu {
+        ul {
+            li {
+                &.menu-item-has-children {
+    
+                    // Mega menu
+                    &.has-megamenu {
+                        @include media-breakpoint-up(lg) {
+                            padding-top: rem-calc(11.5);
+                            padding-bottom: rem-calc(11.5);
+                        }
+    
+                        &>a {
+                            @include media-breakpoint-up(lg) {
+                                position: relative;
+                            }
+                        }
+    
+                        &>.sub-menu {
+                            @include media-breakpoint-up(lg) {
+                                padding-left: rem-calc(20);
+                                padding-right: rem-calc(20);
+                                padding-top: rem-calc(30);
+                                padding-bottom: 0;
+                            }
+    
+                            &>li.menu-item {
+                                @include media-breakpoint-up(lg) {
+                                    float: left;
+                                    text-align: left;
+                                    white-space: normal;
+                                    border-right: 1px solid $gray-300;
+                                    margin-bottom: rem-calc(40) !important;
+    
+                                    a {
+                                        padding: 0 rem-calc(22);
+                                    }
+                                }
+                            }
+    
+                            .menu-item-has-children {
+                                background-image: unset;
+    
+                                &>a {
+                                    @include media-breakpoint-up(lg) {
+                                        position: relative;
+                                        font-size: rem-calc(16);
+                                        font-weight: 500;
+                                    }
+    
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+    
+                                .sub-menu {
+                                    @include media-breakpoint-up(lg) {
+                                        background: none;
+                                        box-shadow: none;
+                                        border-radius: 0;
+                                        border: none;
+                                        position: static;
+                                        display: block;
+                                        padding: rem-calc(20) 0 0;
+    
+                                        li.menu-item {
+                                            width: 100%;
+    
+                                            + li {
+                                                margin-top: rem-calc(10);
+                                            }
+                                        }
+                                    }
+    
+                                    &:after {
+                                        content: '';
+                                        clear: both;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+    
+    
+                        &.sub-menu-col-two {
+                            .sub-menu {
+                                @include media-breakpoint-up(lg) {
+                                    width: rem-calc(425);
+    
+                                    &>li.menu-item {
+                                        width: 50%;
+    
+                                        &:nth-child(2n + 0) {
+                                            border-right: none;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            &:hover {
+                                .sub-menu {
+                                    @include media-breakpoint-up(lg) {
+                                        left: auto;
+                                    }
+                                }
+                            }
+                        }
+    
+                        &.sub-menu-col-three,
+                        &.sub-menu-col-four {
+                            @include media-breakpoint-up(lg) {
+                                position: static;
+    
+                                .sub-menu {
+                                    top: calc(50% + rem-calc(22));
+                                    right: 0;
+                                    width: 100%;
+                                    box-shadow: none;
+                                    border-radius: 0;
+                                }
+                            }
+                        }
+    
+                        &.sub-menu-col-three {
+                            .sub-menu {
+                                &>li.menu-item {
+                                    @include media-breakpoint-up(lg) {
+                                        width: 33.3333%;
+    
+                                        &:nth-child(3n + 0) {
+                                            border-right: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                        &.sub-menu-col-four {
+                            .sub-menu {
+                                li.menu-item {
+                                    @include media-breakpoint-up(lg) {
+                                        width: 25%;
+    
+                                        &:nth-child(4n + 0) {
+                                            border-right: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

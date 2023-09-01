@@ -1,0 +1,33 @@
+.wp-block-navigation {
+
+    &__responsive-container-content,
+    &__responsive-container {
+        @include media-breakpoint-up(md) {
+
+            display: block !important;
+        }
+
+        .block-page-list>div {
+            padding: 0;
+        }
+
+        .wp-block-page-list {
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-right: 1.875rem;
+
+                a {
+                    color: $black !important;
+                    font-weight: 700 !important;
+
+                    &:hover {
+                        color: $primary !important;
+                    }
+                }
+            }
+        }
+    }
+
+}

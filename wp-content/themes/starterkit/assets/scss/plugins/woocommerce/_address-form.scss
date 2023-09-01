@@ -1,0 +1,37 @@
+.woocommerce-address-fields {
+  label {
+    display: block;
+    color: $label;
+    padding-bottom: rem-calc(16);
+    font-weight: 500;
+    abbr {
+      text-decoration: none;
+    }
+  }
+  button {
+    @extend .btn, .btn-primary;
+    margin-top: rem-calc(16);
+  }
+}
+.woocommerce-input-wrapper {
+  input,
+  select {
+    outline: none;
+    width: 100%;
+    border: rem-calc(1) solid $gray-500;
+    &:focus {
+      border: 1px solid $primary;
+    }
+  }
+  .woocommerce-input-wrapper {
+    input,
+    select {
+      outline: none;
+      width: 100%;
+      border: 1px solid $gray-500;
+      &:focus {
+        border: rem-calc(1) solid $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+BRANCH="starterkit-v2"
+
+cd /home/u1870-2dotkcbdng15/www/starterkit-v2.draftserver.com/public_html
+git add .
+git stash
+git checkout $BRANCH
+git pull origin $BRANCH

@@ -1,0 +1,48 @@
+.woocommerce-MyAccount-navigation{
+    ul{
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        border: 0 solid $gray-200;
+        border-width: rem-calc(0 0 1 1);
+        border-top-left-radius: rem-calc(10) ;
+        border-top-right-radius: rem-calc(10) ;
+        border-bottom-right-radius: rem-calc(10);
+        border-bottom-left-radius: rem-calc(10);
+        li{
+            
+            border: 1px solid $gray-200;
+            border-width: rem-calc(1 1 0 0);
+            &:hover{
+                background-color: $grayL;
+            }
+                a{
+                    display: block;
+                    padding: rem-calc(20 30);
+                    color: $darkest;
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+                &.is-active{
+                    background: $grayL;
+                    a{
+                        color: $primary;
+                    }
+                }
+        
+            &:first-child{
+                border-radius: rem-calc(10 10 0 0);
+            }
+            &:last-child{
+                border-radius: rem-calc(0 0 10 10);
+            a{
+                color: $danger;
+            }
+            }
+        }
+        @include media-breakpoint-down(lg){
+            margin-bottom: rem-calc(40);
+        }
+    }
+}   

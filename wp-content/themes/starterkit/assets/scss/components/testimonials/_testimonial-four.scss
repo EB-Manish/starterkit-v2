@@ -1,0 +1,53 @@
+.section-testimonial-four {
+  .testimonial-img-wrap {
+    max-width: rem-calc(553);
+    padding: rem-calc(5);
+    margin-bottom: rem-calc(48);
+    @include media-breakpoint-up(md) {
+      margin-bottom: unset;
+    }
+  }
+  .section-heading {
+    position: relative;
+    padding: rem-calc(5 5 5 51);
+    &:before {
+      content: "";
+      position: absolute;
+      left: rem-calc(5);
+      top: 0;
+      width: rem-calc(36);
+      height: rem-calc(36);
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='24' viewBox='0 0 29 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.5 0.0247087L11.5 5.52471C8.5 5.49991 7.3688 7.52471 7 8.99991C6.6312 10.4751 7 13.0245 7 13.0245H12.5V23.5241L1.37658 23.5243C1.37658 23.5243 0 18.4999 0 11.5248C0 2.5248 8.16667 -0.300697 11.5 0.0247087ZM27.5 0.0247087L27.5 5.52471C24.5 5.49991 23.3688 7.52471 23 8.99991C22.6312 10.4751 23 13.0245 23 13.0245H28.5V23.5241L17.3766 23.5243C17.3766 23.5243 16 18.4999 16 11.5248C16 2.5248 24.1667 -0.300697 27.5 0.0247087Z' fill='%237C8794'/%3E%3C/svg%3E");
+      @include media-breakpoint-up(md) {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='24' viewBox='0 0 29 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.5 0.0247087L11.5 5.52471C8.5 5.49991 7.3688 7.52471 7 8.99991C6.6312 10.4751 7 13.0245 7 13.0245H12.5V23.5241L1.37658 23.5243C1.37658 23.5243 0 18.4999 0 11.5248C0 2.5248 8.16667 -0.300697 11.5 0.0247087ZM27.5 0.0247087L27.5 5.52471C24.5 5.49991 23.3688 7.52471 23 8.99991C22.6312 10.4751 23 13.0245 23 13.0245H28.5V23.5241L17.3766 23.5243C17.3766 23.5243 16 18.4999 16 11.5248C16 2.5248 24.1667 -0.300697 27.5 0.0247087Z' fill='%23EAECF4'/%3E%3C/svg%3E");
+      }
+    }
+    &__name {
+      margin-top: rem-calc(24);
+      margin-bottom: rem-calc(32);
+      position: relative;
+      padding-left: rem-calc(25);
+      font-size: rem-calc(24);
+      font-weight: 300;
+      line-height: rem-calc(32);
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem-calc(40);
+      }
+      &:before {
+        content: "";
+        width: rem-calc(15);
+        height: rem-calc(1);
+        background-color: $slate;
+        left: 0;
+        @include y_center;
+      }
+    }
+    .client-logo {
+      width: rem-calc(124);
+      @include media-breakpoint-up(md) {
+        width: rem-calc(180);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.wp-block-table {
+  tbody {
+    tr {
+      border: rem-calc(1) solid $devider;
+      td {
+        padding: rem-calc(15 30);
+      }
+    }
+  }
+}

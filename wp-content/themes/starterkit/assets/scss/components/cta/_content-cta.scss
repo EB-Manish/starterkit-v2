@@ -1,0 +1,20 @@
+@import 'cta-one';
+@import 'cta-two';
+@import "cta-three";
+@import 'cta-four';
+@import 'cta-five';
+@import 'cta-six';
+
+// content-full-width-cta global css
+.section-cta{
+    .section-heading{
+        &__title{
+            margin-bottom:rem-calc(16);
+            @include media-breakpoint-up(md){
+                margin-bottom:rem-calc(8);
+            }
+        }
+        
+    }
+    
+}

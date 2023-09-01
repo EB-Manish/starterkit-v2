@@ -1,0 +1,103 @@
+/*
+Theme Name: Starter Kit
+
+WooCommerce styles override
+*/
+
+// WooCommerce color variables
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #0f834d;
+$woocommerce__color-info: #3d9cd2;
+
+@font-face {
+    font-family: "star";
+    src: url('../woocommerce/font/star.woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+// Import variables and mixins
+@import "../../abstracts/abstracts";
+
+/**
+ * rating star
+ */
+ @import "./rating-star";
+/**
+ * Shop tables
+ */
+@import "./tables";
+
+/**
+ * Products
+ */
+@import "./products";
+
+/**
+ * Single product
+ */
+@import "./single-product";
+
+/**
+ * Checkout
+ */
+@import "./checkout";
+
+/**
+ * General WooCommerce components
+ */
+@import "./components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "./widgets";
+
+/**
+ * WooCommerce widgets
+ */
+@import "./cart";
+/**
+ * WooCommerce Navigation
+ */
+@import "./navigation";
+
+/**
+ * WooCommerce Content
+ */
+@import "./content";
+
+/**
+ * WooCommerce My account
+ */
+@import "./my-account";
+
+/**
+ * WooCommerce Address
+ */
+@import "./address";
+
+/**
+ * WooCommerce Address Form
+ */
+@import "./address-form";
+@import "./account-details";
+
+/**
+ * WooCommerce Logout form
+ */
+@import "./logout-form";
+/**
+ * WooCommerce Logout form
+ */
+@import "./pay-order";
+/**
+ * WooCommerce Order
+ */
+@import "./order";
+/**
+ * Minicart
+ */
+@import "./mini-cart";
+
+
+

@@ -1,0 +1,29 @@
+.woocommerce-MyAccount-content {
+  .woocommerce-EditAccountForm {
+    label {
+      padding-bottom: rem-calc(18);
+      font-weight: 500;
+      font-size: rem-calc(16);
+      line-height: rem-calc(23);
+      color: $label;
+    }
+    input {
+      width: 100%;
+      outline: none;
+      border: 1px solid $gray-500;
+      margin-bottom: rem-calc(2);
+      &:focus {
+        border: 1px solid $primary;
+      }
+    }
+
+    fieldset {
+      legend {
+        @extend .h5;
+      }
+    }
+    .woocommerce-Button {
+      @extend .btn, .btn-primary;
+    }
+  }
+}

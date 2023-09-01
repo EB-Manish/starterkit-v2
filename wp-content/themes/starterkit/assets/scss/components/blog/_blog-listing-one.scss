@@ -1,0 +1,47 @@
+.section-blog-listing-one {
+  .featured-posts {
+    margin-bottom: rem-calc(64);
+
+    .blog-post {
+      &__thumb {
+        img {
+          width: 100%;
+          aspect-ratio: 731/470;
+        }
+
+        .ph-picture {
+          height: 0;
+          width: auto;
+          padding-bottom: 64.2%;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        &__content {
+          .entry-title {
+            a {
+              font-size: rem-calc(24);
+            }
+          }
+
+          .excerpt {
+            display: block;
+            font-size: rem-calc(12);
+          }
+
+          .entry-meta {
+            .author-profile {
+              img {
+                display: block;
+              }
+            }
+
+            .posted-on {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

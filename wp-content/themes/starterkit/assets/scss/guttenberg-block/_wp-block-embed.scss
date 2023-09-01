@@ -1,0 +1,20 @@
+.block-embed {
+    .is-type-video {
+
+        .wp-block-embed__wrapper {
+            position: relative;
+            width: 100%;       
+            height: 0;
+            padding-bottom: 56.25%;
+            iframe,
+            video {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+    }
+}

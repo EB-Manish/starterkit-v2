@@ -1,0 +1,57 @@
+@import "ecommerce-one";
+@import "ecommerce-two";
+@import "ecommerce-three";
+
+// @import 'ecommerce-five';
+// ecommerce global css
+.product-wrap {
+  margin-bottom: rem-calc(64);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(72);
+  }
+
+  .product {
+    padding-bottom: rem-calc(60);
+    position: relative;
+
+
+
+    &-desc {
+      &__title {
+        margin: 0;
+
+        a {
+          color: $slate;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      &__categories {
+        color: $category;
+      }
+
+      &__price {}
+    }
+
+
+
+
+    .btn-wrap {
+      a.add_to_cart_button {
+        display: block;
+        background: $primary;
+        position: absolute;
+        bottom: 0;
+        @extend .btn;
+        @extend .btn-primary;
+
+      }
+
+
+    }
+  }
+}

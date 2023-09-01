@@ -1,0 +1,21 @@
+.page-links {
+  @extend .pagination;
+  .post-page-numbers {
+    display: inline-block;
+    border: none;
+    color: $black;
+    width: rem-calc(24);
+    height: rem-calc(24);
+    font-size: rem-calc(14);
+    line-height: 1.6;
+    text-align: center;
+    padding: 0;
+    &.current {
+      border: 1px solid $primary;
+      border-radius: 50%;
+    }
+    &:first-child{
+      margin-left: rem-calc(8);
+    }
+  }
+}

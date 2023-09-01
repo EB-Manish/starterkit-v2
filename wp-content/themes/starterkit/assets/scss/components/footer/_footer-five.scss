@@ -1,0 +1,56 @@
+.site-footer--five {
+  .site-footer-widget {
+    @include media-breakpoint-up(xl) {
+      width: rem-calc(439);
+    }
+    .site-footer-logo {
+      width: rem-calc(156);
+      margin: unset;
+      margin-bottom: rem-calc(30);
+      @include media-breakpoint-up(lg) {
+        width: rem-calc(166);
+        margin-bottom: rem-calc(24);
+      }
+    }
+    .site-footer-desc {
+      p {
+        color: $gray;
+      }
+    }
+    .social-icons {
+      margin-top: rem-calc(48);
+      @include media-breakpoint-up(lg) {
+        margin-top: rem-calc(68);
+      }
+      &__item {
+        margin: 0 rem-calc(19) 0 0;
+      }
+    }
+  }
+  .widget-title {
+    margin-top: rem-calc(72);
+    @include media-breakpoint-up(md) {
+      margin-top: unset;
+    }
+  }
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: rem-calc(30);
+    padding: 0;
+    &__item {
+      list-style: none;
+      flex: 0 0 auto;
+      width: 50%;
+      margin-bottom: rem-calc(30);
+      p {
+        opacity: 0.6;
+        margin-bottom: 0;
+        strong {
+          font-weight: $display-font-weight;
+        }
+      }
+    }
+  }
+}

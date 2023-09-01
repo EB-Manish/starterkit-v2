@@ -1,0 +1,167 @@
+.section-testimonial-seven {
+  position: relative;
+  &:before {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      position: absolute;
+      width: 58%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $grayXL;
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 60%;
+    }
+  }
+  .section-heading {
+    &__title {
+      font-weight: 600;
+      font-size: rem-calc(40);
+      line-height: rem-calc(56);
+      margin-bottom: rem-calc(64);
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem-calc(60);
+      }
+      @include media-breakpoint-down(lg) {
+        width: rem-calc(295);
+      }
+    }
+  }
+  .testimonial-seven {
+    .testimonial-seven-item {
+      .image-video-btn {
+        position: relative;
+        margin-bottom: rem-calc(24);
+        @include media-breakpoint-up(xl) {
+          width: rem-calc(541);
+          margin-bottom: 0;
+        }
+        &__play {
+          width: rem-calc(39);
+          height: rem-calc(39);
+          border: none;
+          outline: none;
+          background-color: transparent;
+          background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 0C14.3547 0 0 14.3547 0 32C0 49.6453 14.3547 64 32 64C49.6453 64 64 49.6453 64 32C64 14.3547 49.6453 0 32 0ZM24 45.3333V18.6667L45.3333 32L24 45.3333Z' fill='%233C434A' /%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: rem-calc(39);
+          @include xy_center;
+          @include media-breakpoint-up(md) {
+            width: rem-calc(64);
+            height: rem-calc(64);
+            background-size: rem-calc(64);
+          }
+          &:hover {
+            background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 0C14.3547 0 0 14.3547 0 32C0 49.6453 14.3547 64 32 64C49.6453 64 64 49.6453 64 32C64 14.3547 49.6453 0 32 0ZM24 45.3333V18.6667L45.3333 32L24 45.3333Z' fill='%232196F3' /%3E%3C/svg%3E");
+          }
+        }
+      }
+      .testimonial-content {
+        @include media-breakpoint-up(lg) {
+          padding-left: 1%;
+        }
+        @include media-breakpoint-up(xl) {
+          padding-left: 14.33333333%;
+        }
+        @include media-breakpoint-up(xxl) {
+          padding-left: 7.33333333%;
+        }
+
+        &__desc {
+          color: $slate;
+          font-size: rem-calc(24);
+          line-height: rem-calc(40);
+          margin-bottom: rem-calc(24);
+          @include media-breakpoint-up(md) {
+            font-size: rem-calc(32);
+            line-height: rem-calc(48);
+            margin-bottom: rem-calc(32);
+          }
+          @include media-breakpoint-up(xl) {
+            width: rem-calc(490);
+          }
+        }
+        &-user {
+          margin-bottom: rem-calc(24);
+          &-image {
+            margin-right: rem-calc(16);
+            figure {
+              margin: 0;
+            }
+            img {
+              width: rem-calc(80);
+              height: rem-calc(80);
+              @include media-breakpoint-up(md) {
+                width: rem-calc(56);
+                height: rem-calc(56);
+              }
+            }
+          }
+          &-info {
+            &__name {
+              color: $slate;
+            }
+            &__position {
+              color: $gray;
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn-close {
+    position: absolute;
+    top: rem-calc(-30);
+    right: rem-calc(-30);
+    background: transparent
+      url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23ffffff%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e")
+      center/1em auto no-repeat;
+  }
+}
+
+// swiper
+
+.testimonial-seven {
+  .pagination-arrow-wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    @include media-breakpoint-up(md){
+      justify-content:flex-start;
+    }
+    .swiper-pagination{
+      position: relative;
+      top:unset;
+      margin: unset !important;
+      bottom:unset;
+      width: auto;
+      .swiper-pagination-bullet{
+        position: relative;
+        top:unset;
+      }
+    }
+    .swiper-button-next, .swiper-button-prev{
+      position: relative;
+      top:unset;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      margin: unset !important;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: $swiper-navigation-size;
+        color: $swiper-navigation-color;
+       
+    }
+}
+@include media-breakpoint-down(md) {
+  &__item {
+    &.swiper-slide {
+      height: auto;
+    }
+  }
+}
+}

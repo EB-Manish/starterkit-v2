@@ -1,0 +1,57 @@
+.section-testimonial-three {
+  .testimonial-multiple-three {
+    margin-top: rem-calc(72);
+
+    &__items {
+      margin-bottom: rem-calc(30);
+
+      .testimonial-item {
+        border: 1px solid #eaecf4;
+        padding: rem-calc(64 56);
+        height: 100%;
+
+        @include media-breakpoint-down(md) {
+          padding: rem-calc(48);
+        }
+
+        figure {
+          margin: 0;
+        }
+
+        .desc {
+          font-size: rem-calc(24);
+          font-weight: 400;
+          line-height: rem-calc(40);
+
+          @include media-breakpoint-down(md) {
+            font-size: rem-calc(16);
+            line-height: rem-calc(24);
+          }
+        }
+
+        .author {
+          margin-top: rem-calc(154);
+
+          @include media-breakpoint-down(md) {
+            margin-top: rem-calc(24);
+          }
+
+          &-info {
+            padding-left: rem-calc(20);
+
+            p {
+              margin-bottom: rem-calc(5);
+              font-weight: 400;
+            }
+          }
+
+          img {
+            width: rem-calc(56);
+            height: rem-calc(56);
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

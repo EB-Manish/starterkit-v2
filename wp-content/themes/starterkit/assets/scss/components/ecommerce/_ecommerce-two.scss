@@ -1,0 +1,12 @@
+.section-ecommerce-two {
+  .product {
+    &-img {
+      height: rem-calc(335);
+      margin-bottom: rem-calc(24);
+      @include media-breakpoint-up(md) {
+        height: rem-calc(435);
+        margin-bottom: rem-calc(16);
+      }
+    }
+  }
+}

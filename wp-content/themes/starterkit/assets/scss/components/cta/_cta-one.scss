@@ -1,0 +1,28 @@
+.section-cta--one{
+    .section-heading{
+        @include media-breakpoint-up(md){
+            width:rem-calc(485);
+            margin:0 auto;
+        }
+        &__title{
+            padding: 0 rem-calc(20);
+            @include media-breakpoint-up(md){
+                padding:0;
+            }
+        }
+        &__desc{
+            margin-bottom:rem-calc(48);
+            @include media-breakpoint-up(md){
+                margin-bottom:rem-calc(32);
+            }
+        }
+        &__btn-wrap{
+            .btn{
+                width:rem-calc(165);
+                padding:rem-calc(9.5 22);
+                height: rem-calc(44);
+            }
+        }
+    }
+    
+}

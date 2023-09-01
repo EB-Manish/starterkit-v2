@@ -1,0 +1,50 @@
+.section-hero-one {
+    height: 100vh;
+    position: relative; 
+    
+    &.overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 65, 117, 0.4);
+    }
+
+    .background-image {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;        
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top left;
+        }
+    }
+
+    .section-heading {
+        &__desc {
+            max-width: rem-calc(485);
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+    .container {
+        z-index: 2;
+    }
+
+    .page-down {
+        position: absolute;
+        left: 50%;
+        bottom: rem-calc(60);
+        transform: translateX(-50%);
+
+    }
+}

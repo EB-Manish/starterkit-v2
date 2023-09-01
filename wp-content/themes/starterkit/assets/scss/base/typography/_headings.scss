@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+h1,
+.h1 {
+  line-height: 1.143;
+  @include media-breakpoint-up(md) {
+  }
+}
+h2,
+.h2 {
+  line-height: 1.167;
+  @include media-breakpoint-up(md) {
+  }
+}
+h3,
+.h3 {
+  line-height: 1.4;
+  @include media-breakpoint-up(md) {
+  }
+}
+h4,
+.h4 {
+  line-height: 1.25;
+  @include media-breakpoint-up(md) {
+  }
+}
+h5,
+.h5 {
+  line-height: 1.3;
+  @include media-breakpoint-up(md) {
+  }
+}
+h6,
+.h6 {
+  line-height: 1.5;
+  @include media-breakpoint-up(md) {
+  }
+}
+
+.fs-hero {
+  line-height: 1.10638;
+  font-size: rem-calc(94);
+  @include media-breakpoint-up(md) {
+  }
+}

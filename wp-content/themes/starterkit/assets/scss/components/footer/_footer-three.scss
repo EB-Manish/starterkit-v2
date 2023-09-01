@@ -1,0 +1,17 @@
+.site-footer--three {
+  .site-footer__top {
+    margin-bottom: rem-calc(64);
+  }
+  .site-footer__bottom {
+    .social-icons {
+      margin-bottom: unset;
+    }
+  }
+
+  .news-letter-form {
+    margin: auto;
+    @include media-breakpoint-up(lg) {
+      margin-left: auto;
+    }
+  }
+}

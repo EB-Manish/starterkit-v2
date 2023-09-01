@@ -1,0 +1,42 @@
+{
+  "name": "starterkit",
+  "version": "1.0.0",
+  "description": "A quick starter theme created by Ebpears.",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
+    "imports-loader": "^4.0.1",
+    "mini-css-extract-plugin": "^2.7.2",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "counterup2": "^2.0.2",
+    "jquery": "^3.6.3",
+    "jquery-bridget": "^3.0.1",
+    "masonry-layout": "^4.2.2",
+    "placeholder-loading": "^0.6.0",
+    "select2": "^4.1.0-rc.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^9.0.3"
+  }
+}

@@ -1,0 +1,24 @@
+.section-price-table-one {
+  .section-heading__title {
+    margin-bottom: rem-calc(66);
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem-calc(40);
+    }
+  }
+
+  .section-content {
+    .plan-card {
+      max-width: rem-calc(349);
+      margin: rem-calc(15);
+      padding: rem-calc(0 26);
+      padding-top: rem-calc(48);
+
+      &__btn {
+        a {
+          padding: rem-calc(20.5);
+        }
+      }
+    }
+  }
+}

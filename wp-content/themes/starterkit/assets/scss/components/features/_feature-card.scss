@@ -1,0 +1,47 @@
+.features-lists{
+  &__item {
+    .icon,
+    .image-wrapper {
+      figure {
+        margin: 0;
+        line-height: 1;
+      }
+    }
+    .icon {
+      margin-bottom: rem-calc(24);
+      img,
+      svg {
+        width: rem-calc(96);
+        height: rem-calc(96);
+        object-fit: cover;
+      }
+    }
+  
+    .image-wrapper {
+      margin-bottom: rem-calc(36);
+      img,
+      svg {
+        height: rem-calc(218);
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .content {
+      &__title {
+        margin-bottom: 0;
+      }
+      &__desc {
+        margin-top: rem-calc(20);
+        @include media-breakpoint-up(md) {
+          max-width: rem-calc(288);
+        }
+        p {
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

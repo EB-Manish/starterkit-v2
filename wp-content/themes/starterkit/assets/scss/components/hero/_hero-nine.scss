@@ -1,0 +1,30 @@
+.section-hero-nine {
+  .container-wrapper {
+    max-width: rem-calc(1440);
+    margin: auto;
+
+    .section-col-img {
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+
+    .section-heading {
+      margin: auto;
+
+      @include media-breakpoint-down(md) {
+        margin: rem-calc(80) auto;
+      }
+
+      &__title {
+        margin-bottom: rem-calc(40);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: rem-calc(40);
+    }
+  }
+}

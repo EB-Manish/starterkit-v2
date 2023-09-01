@@ -1,0 +1,14 @@
+.block-media-text {
+  .wp-block-media-text {
+    &__media {
+      @include media-breakpoint-down(md) {
+        margin-bottom: rem-calc(24);
+      }
+    }
+    &__content{
+        @include media-breakpoint-down(md) {
+            padding: 0;
+          } 
+    }
+  }
+}

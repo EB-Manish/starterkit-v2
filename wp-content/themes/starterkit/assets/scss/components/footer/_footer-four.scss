@@ -1,0 +1,33 @@
+.site-footer--four {
+  .site-footer__top {
+    margin-bottom: rem-calc(66);
+  }
+  .site-footer__mid {
+    .social-icons {
+      margin-top: rem-calc(41);
+      margin-bottom: unset;
+    }
+    .footer-widget {
+      .widget {
+        .menu-item {
+          a {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+    &__item {
+      &:first-child {
+        width: 100%;
+        .site-footer-widget {
+          margin: 0 auto rem-calc(40);
+        }
+      }
+    }
+  }
+  .news-letter-form {
+    @include media-breakpoint-up(md) {
+      margin-left: auto;
+    }
+  }
+}

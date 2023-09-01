@@ -1,0 +1,122 @@
+.section-cta--six{
+    .offset-0{
+        margin-left: 0 !important;
+    }
+    .contact-image{
+        
+        margin-bottom: rem-calc(32);
+       
+        @include media-breakpoint-up(lg){
+            max-width:rem-calc(604);
+            margin-bottom: rem-calc(0);
+        }
+        img{
+            object-fit: cover;
+            height: rem-calc(318);
+            @include media-breakpoint-up(md){
+                height: rem-calc(450);
+            }
+            @include media-breakpoint-up(lg){
+                height:unset;
+            }
+        }
+    }
+    .section-heading{
+        padding-left:rem-calc(24);
+        padding-right:rem-calc(24);
+        margin-bottom: rem-calc(40);
+        @include media-breakpoint-up(lg){
+            margin-bottom: rem-calc(50);
+        }
+        &__title{
+            margin-bottom:rem-calc(16);
+        }
+    }
+    .form-wrapper{
+       position: relative;
+        padding-left:rem-calc(24);
+        padding-right:rem-calc(24);
+        @include media-breakpoint-up(xl){
+            max-width:rem-calc(600);
+        }
+        .gform_wrapper{
+            .gform_body {
+                margin-bottom:rem-calc(38);
+                @include media-breakpoint-up(lg){
+                    margin-bottom:rem-calc(22);
+                }
+                .gform_fields{
+                    .gfield{
+                        margin-bottom:rem-calc(16);
+                        .gfield_label{
+                            color:$label;
+                            font-size:rem-calc(16);
+                            line-height: rem-calc(23);
+                            margin-bottom:rem-calc(8)
+                        }
+                        .ginput_container{
+                            textarea{
+                                min-height:rem-calc(140);
+                            }
+                        }
+                        &.custom-checkbox{
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content:flex-end;
+                            align-items: center;
+                            margin-bottom:0;
+                            @include media-breakpoint-up(lg){
+                                position: absolute;
+                                left:rem-calc(238);
+                                bottom: rem-calc(9);
+                                width:56%;
+
+                            }
+                            
+                            .gfield_label{
+                                color:$slate;
+                                margin-bottom:0;
+                                position: absolute;
+                                bottom: 0;
+                                left: rem-calc(45);
+                                cursor: pointer;
+                            }
+                            .ginput_container{
+                                width: rem-calc(25);
+                                height:rem-calc(25);
+                                margin-right:rem-calc(12);
+                                label{
+                                    position:relative;
+                                    cursor:pointer;
+                                
+                                }
+                               
+                                input{
+                                    width:rem-calc(25);
+                                    height:rem-calc(25);
+                                    padding: 0;
+                                    margin-bottom: 0;
+                                    cursor: pointer;
+                                }
+                            }
+                            .gfield_validation_message{
+                                position: absolute;
+                                left: rem-calc(0);
+                                top:rem-calc(30);
+                            }
+                        }
+                    }
+                }
+            }
+            .gform_footer {
+                input[type="submit"]{
+                    width:100%;
+                    height: rem-calc(42);
+                    @include media-breakpoint-up(lg){
+                        width:rem-calc(183);
+                    }
+                }
+            }
+        }
+    }
+} 

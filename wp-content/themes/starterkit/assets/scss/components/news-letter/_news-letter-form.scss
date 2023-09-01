@@ -1,0 +1,51 @@
+.news-letter-form {
+  @include media-breakpoint-up(md) {
+    max-width: rem-calc(513);
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: rem-calc(6) 0 0;
+    padding-top: rem-calc(16);
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      padding: rem-calc(16) 0;
+    }
+    .gform_body {
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: rem-calc(340);
+      }
+      input {
+        background-color: $grayL;
+        border: none;
+        color: $gray;
+        width: 100%;
+        height: rem-calc(44) !important;
+        padding: rem-calc(10 16);
+        border-radius: 0 !important;
+      }
+    }
+    .gform_validation_errors {
+      display: none;
+    }
+    .gform_footer {
+      @include media-breakpoint-down(md) {
+        margin-top: 5px !important;
+        padding: 0 !important;
+        width: 100%;
+      }
+      .gform_button {
+        height: rem-calc(44);
+        border: none;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          width: rem-calc(165);
+        }
+      }
+    }
+  }
+}
